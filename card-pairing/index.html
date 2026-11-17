@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connect your card terminal | PolyPOS</title>
+<meta name="description" content="How to pair your bank's card terminal with PolyPOS through Linkly Cloud, and what to do if pairing or a payment goes wrong.">
+<link rel="canonical" href="https://polypos.au/card-pairing/">
+<link rel="alternate" hreflang="en-AU" href="https://polypos.au/card-pairing/">
+<link rel="alternate" hreflang="zh-Hans" href="https://polypos.au/zh/card-pairing/">
+<link rel="alternate" hreflang="x-default" href="https://polypos.au/card-pairing/">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+  .guide { max-width: 760px; }
+  .guide h1 { margin-top: 14px; }
+  .guide .lead { margin-top: 16px; }
+  .guide h2 { margin-top: 44px; font-size: clamp(23px, 2.6vw, 28px); }
+  .guide ul { margin: 14px 0 0; padding-left: 1.2em; }
+  .guide ul li + li { margin-top: 8px; }
+  .howto { margin: 18px 0 0; padding: 0; list-style: none; counter-reset: n; }
+  .howto li { position: relative; margin-top: 12px; padding: 16px 18px 16px 62px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); counter-increment: n; }
+  .howto li::before { content: counter(n); position: absolute; left: 16px; top: 13px; display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: var(--accent-soft); color: var(--accent-dark); font-weight: 700; }
+  .howto small { display: block; margin-top: 4px; color: var(--ink-2); font-size: 15.5px; }
+  .keys { font-family: var(--mono); font-weight: 650; white-space: nowrap; }
+  .fix { margin-top: 14px; }
+  .fix .card + .card { margin-top: 12px; }
+  .fix h3 { font-size: 17px; }
+  .warn { margin-top: 16px; padding: 16px 20px; background: var(--now-soft); border-radius: var(--radius); color: var(--ink); }
+  .guide .contact-line { margin-top: 44px; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top wrap">
+  <a class="brand" href="../">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.6l9 5.2v10.4l-9 5.2-9-5.2V6.8z" fill="#0b6657"/><path d="M9.4 17V7.2h3.5a3.1 3.1 0 0 1 0 6.2H9.4" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    PolyPOS
+  </a>
+  <nav class="nav" aria-label="Sections of this page">
+    <a href="#before">Before you start</a>
+    <a href="#pair">Pair</a>
+    <a href="#problems">If something goes wrong</a>
+  </nav>
+  <a class="lang" href="../zh/card-pairing/" lang="zh-Hans" hreflang="zh-Hans">中文</a>
+</header>
+
+<main id="main" class="section">
+  <div class="wrap guide">
+    <p class="chip">Help for merchants</p>
+    <p class="warn">Card terminal connection is still in trial and not yet available to every shop.</p>
+    <h1>Connect your card terminal to PolyPOS</h1>
+    <p class="lead">PolyPOS sends the amount to your bank's card terminal and gets the result back by itself, so nothing is keyed in twice. The two are connected through <strong>Linkly Cloud</strong>.</p>
+
+    <h2 id="before">Before you start</h2>
+    <ul>
+      <li>Your terminal must support Linkly Cloud and be connected to the internet through your shop's Wi-Fi or a network cable. Check <a href="https://www.linkly.com.au/help-centre/bank-terminal-support.html" rel="noopener">Linkly's list of supported terminals</a> or ask your bank.</li>
+      <li>Ask your bank to turn on <strong>Linkly Cloud</strong> for your terminal. The bank emails you a <strong>Linkly Cloud username and password</strong>.</li>
+      <li>You need to be able to sign in to the PolyPOS Dashboard as the owner.</li>
+    </ul>
+
+    <h2 id="pair">Pair the terminal (about 2 minutes)</h2>
+    <ol class="howto">
+      <li>Open the PolyPOS Dashboard and go to <strong>Card terminal</strong>.</li>
+      <li>Enter the <strong>Linkly Cloud username and password</strong> from your bank's email.</li>
+      <li>On the card terminal, press <span class="keys">FUNC</span>, enter <span class="keys">8880</span>, then press <span class="keys">OK</span> (or <span class="keys">Enter</span>). The terminal shows a <strong>pairing code</strong>.
+        <small>The code works for 3 minutes. If your terminal has no FUNC key or shows something else, ask your bank how to get a Linkly Cloud pairing code.</small></li>
+      <li>Enter the pairing code in PolyPOS and press <strong>Pair</strong>. You'll see <strong>Paired</strong>.</li>
+      <li>On the same <strong>Card terminal</strong> page, use <strong>Try a payment</strong> for a small amount, then <strong>Refund this</strong>, to check everything works.</li>
+    </ol>
+
+    <h2 id="problems">If something goes wrong</h2>
+    <div class="fix">
+      <article class="card">
+        <h3>“Linkly turned it down”</h3>
+        <p>Check the username and password. The pairing code changes after 3 minutes, so make a new one (<span class="keys">FUNC</span> → <span class="keys">8880</span> → <span class="keys">OK</span>) and enter it straight away.</p>
+      </article>
+      <article class="card">
+        <h3>The page says “Pair again: …”</h3>
+        <p>This shows when the terminal's pairing code was reset, the Linkly Cloud password changed, or the terminal was paired with another POS. Pair it again as above.</p>
+      </article>
+      <article class="card">
+        <h3>The terminal is offline</h3>
+        <p>The terminal must stay connected to the internet. If it is offline, a payment waits for a while and then shows <strong>Not sent</strong>, or <strong>Result unknown</strong> (see below).</p>
+      </article>
+      <article class="card">
+        <h3>“Result unknown”</h3>
+        <p>If PolyPOS can't reach Linkly, it may not know whether a payment went through. Look at the terminal's screen or its receipt, then choose <strong>Approved</strong> or <strong>Declined</strong> in PolyPOS.</p>
+      </article>
+    </div>
+    <p class="warn"><strong>Don't just charge the card again</strong> when the result is unknown. Check the terminal first, or the customer could be charged twice.</p>
+
+    <h2 id="offline">If the internet is down</h2>
+    <p class="intro">If your terminal can still reach the bank on its own (for example over mobile data; ask your bank), take the payment on the terminal by itself, then record it in PolyPOS as a <strong>Card</strong> payment.</p>
+
+    <p class="note contact-line">Need help? Email <a href="mailto:info@polypos.au">info@polypos.au</a>.</p>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>© 2026 MJ Property Pty Ltd, ABN 11 605 418 504</p>
+  </div>
+</footer>
+</body>
+</html>

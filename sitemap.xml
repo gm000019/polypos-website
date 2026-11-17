@@ -10,4 +10,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://polypos.au/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://polypos.au/zh/"/>
   </url>
+  <url>
+    <loc>https://polypos.au/card-pairing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polypos.au/card-pairing/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://polypos.au/zh/card-pairing/"/>
+  </url>
+  <url>
+    <loc>https://polypos.au/zh/card-pairing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polypos.au/card-pairing/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://polypos.au/zh/card-pairing/"/>
+  </url>
 </urlset>
